@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sushi Website</title>
+		<link rel="stylesheet" href="website.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- <style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Roboto", sans-serif;
+				background-color: #0f0f23;
+				color: white;
+			}
+			/* navbar */
+			header {
+				background-color: #14173d;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 20px 60px;
+			}
+
+			.search-bar {
+				display: flex;
+				align-items: center;
+				background-color: white;
+				border-radius: 20px;
+				padding: 5px 10px;
+				margin-left: 20px;
+			}
+
+			.search-bar input {
+				border: none;
+				outline: none;
+				padding: 6px 10px;
+				font-size: 14px;
+				border-radius: 20px;
+				width: 120px;
+			}
+
+			.search-bar img {
+				width: 18px;
+				height: 18px;
+				margin-left: 5px;
+			}
+
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				color: white;
+				font-weight: bold;
+				font-size: 18px;
+			}
+
+			.logo img {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+			nav ul {
+				display: flex;
+				list-style: none;
+				gap: 30px;
+			}
+
+			nav ul li a {
+				color: white;
+				text-decoration: none;
+				font-size: 15px;
+			}
+			/* section */
+			.hero {
+				background-image: url("sushib.gif");
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				padding: 100px 60px;
+				color: white;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				min-height: 500px;
+				position: relative;
+			}
+
+			.text-area {
+				max-width: 500px;
+			}
+
+			.text-area h1 {
+				font-size: 58px;
+				margin-bottom: 42px;
+			}
+
+			.text-area p {
+				font-size: 25px;
+				margin-bottom: 28px;
+				color: #ddd;
+			}
+
+			.order-btn {
+				display: inline-block;
+				padding: 10px 25px;
+				background-color: #14173d;
+				color: white;
+				text-decoration: none;
+				border: 2px solid white;
+				border-radius: 30px;
+				font-weight: bold;
+			}
+			/* section 2 */
+			.popular {
+				background-color: #14173d;
+				padding: 50px 0;
+				text-align: center;
+				position: relative;
+				color: white;
+			}
+
+			.popular h2 {
+				font-size: 36px;
+				font-weight: bold;
+				margin-bottom: 16px;
+			}
+
+			.popular .desc {
+				font-size: 16px;
+				color: #ccc;
+				margin-bottom: 40px;
+			}
+
+			.menu-container {
+				display: flex;
+				justify-content: center;
+				gap: 50px;
+				flex-wrap: wrap;
+			}
+
+			.menu-item {
+				width: 220px;
+				text-align: center;
+			}
+
+			.circle {
+				width: 160px;
+				height: 160px;
+				border-radius: 50%;
+				overflow: hidden;
+				margin: 0 auto 15px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.circle img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.circle1 {
+				background-color: #f7d075;
+			}
+
+			.circle2 {
+				background-color: #000;
+			}
+
+			.circle3 {
+				background-color: #3a4b63;
+			}
+
+			.menu-item h3 {
+				font-size: 16px;
+				font-weight: bold;
+				color: white;
+				margin-bottom: 8px;
+			}
+
+			.menu-item p {
+				font-size: 12px;
+				color: #ccc;
+			}
+			/* start3 */
+			.top-section {
+				background-color: #f7d075;
+				padding: 110px 20px;
+				position: relative;
+			}
+
+			.content-wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 100px; /* reduce this value to control spacing */
+				flex-wrap: wrap;
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+
+			.image-container {
+				width: 270px;
+				height: 270px;
+				border-radius: 50%;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #14173d;
+				flex-shrink: 0; /* Prevent image from shrinking */
+			}
+
+			.image-container img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.content {
+				max-width: 600px;
+				text-align: left;
+			}
+
+			.content h2 {
+				font-size: 45px; /* increased title size */
+				margin-bottom: 25px;
+				color: #14173d;
+			}
+
+			.content p {
+				margin-bottom: 15px;
+				color: #14173d;
+				font-size: 25px;
+				font-weight: 200;
+				margin-bottom: 30px;
+			}
+
+			.order-button {
+				background-color: #14173d;
+				color: #fff;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 25px;
+				cursor: pointer;
+				font-weight: bold;
+				transition: all 0.3s ease;
+			}
+
+			.order-button:hover {
+				background-color: #2a2e6b; /* slightly lighter */
+				transform: scale(1.05);
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+			}
+
+			/* end 3 */
+
+			/* start 4 */
+			.bottom-section {
+				background-color: #14173d;
+				color: #fff;
+				padding: 90px 20px; /* Increased height */
+				text-align: center;
+			}
+
+			.bottom-section h2 {
+				font-size: 45px;
+				margin-bottom: 15px;
+				margin-top: -40px;
+			}
+
+			.bottom-section p {
+				max-width: 600px;
+				margin: 0 auto 50px;
+				font-size: 18px;
+				font-weight: 200;
+			}
+
+			.stats {
+				display: flex;
+				justify-content: center;
+				gap: 100px;
+				flex-wrap: wrap;
+			}
+
+			.stat {
+				border: 3px solid #fff;
+				border-radius: 50%;
+				width: 180px; /* Bigger circle */
+				height: 180px; /* Bigger circle */
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				font-weight: 800;
+			}
+
+			.stat span {
+				font-size: 50px;
+				font-weight: bold;
+			}
+
+			.stat label {
+				font-size: 26px;
+				margin-top: 6px;
+			}
+			.horizontal-bar {
+				height: 6px;
+				width: 120px;
+				margin: 20px auto;
+				border-radius: 3px;
+				background-color: #14173d;
+			}
+			.flip-container {
+				perspective: 1000px;
+				display: inline-block;
+			}
+
+			.flip-container img {
+				transition: transform 0.6s ease;
+				transform-style: preserve-3d;
+			}
+
+			.flip-container:hover img {
+				transform: rotateY(180deg);
+			}
+			/* end 4 */
+			/* start 5 */
+			.top-section.flipped {
+				background-color: #f7d075;
+				padding: 100px 20px;
+				position: relative;
+			}
+
+			.content-wrapper.flipped-wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 100px;
+				flex-wrap: wrap;
+				flex-direction: row-reverse; /* this flips the order */
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+			/* start 6  */
+
+			.header-section {
+				background-color: #1e2244;
+				color: white;
+				text-align: center;
+				padding: 50px 20px;
+				font-family: "Arial", sans-serif;
+			}
+			.header-section .profile-img {
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin-bottom: 20px;
+				margin-top: 40px;
+			}
+			.header-section p {
+				font-size: 18px;
+				margin: 10px auto; /* center with auto margins */
+				margin-bottom: 20px;
+			}
+			.header-section h3 {
+				font-size: 20px;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+			/*  */
+			/* section 7 #f7d075*/
+			.subscribe-section {
+				background-color: #f7d075;
+				color: #1e2244;
+				text-align: center;
+				padding: 70px 20px;
+				position: relative;
+			}
+			.subscribe-section h2 {
+				font-size: 36px;
+				margin-bottom: 23px;
+			}
+			.subscribe-section p {
+				font-size: 16px;
+				max-width: 600px;
+				margin: auto;
+				margin-bottom: 50px;
+			}
+			.subscribe-section .email-box {
+				display: flex;
+				justify-content: center;
+				gap: 0;
+				margin-bottom: 30px;
+			}
+			.subscribe-section input {
+				padding: 15px;
+				border: none;
+				border-radius: 30px 0 0 30px;
+				width: 300px;
+				outline: none;
+			}
+			.subscribe-section button {
+				padding: 15px 25px;
+				background-color: #1e2244;
+				color: white;
+				border: none;
+				border-radius: 0 30px 30px 0;
+				cursor: pointer;
+				font-weight: bold;
+			}
+			/* CSS for Section 3 */
+			.footer {
+				background-color: #111;
+				color: white;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				padding: 130px 20px;
+				font-family: "Arial", sans-serif;
+			}
+			.footer-left {
+				max-width: 250px;
+			}
+			.footer-left h4,
+			.footer-column h4 {
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+			.footer-left p,
+			.footer-column p {
+				font-size: 14px;
+				margin-bottom: 8px;
+			}
+			.social-icons i {
+				font-size: 20px;
+				margin-right: 10px;
+				cursor: pointer;
+			}
+			.footer-column {
+				max-width: 180px;
+			}
+			.striped-circle {
+				width: 120px; /* You can adjust size as needed */
+				height: 120px;
+				border-radius: 50%;
+				background: repeating-linear-gradient(
+					45deg,
+					#14173d,
+					/* Stripe color */ #14173d 6px,
+					transparent 6px,
+					transparent 12px
+				);
+				background-color: #f7d075; /* Background behind transparent */
+				position: relative;
+				overflow: hidden;
+			}
+			.zigzag {
+				display: flex;
+				gap: 0; /* Remove gap to make lines touch */
+				padding: 20px;
+				width: fit-content;
+			}
+
+			.zigzag-line {
+				width: 20px;
+				height: 20px;
+				border-left: 6px solid #f7c774;
+				border-bottom: 6px solid #f7c774;
+				transform: rotate(-45deg);
+			}
+
+			.zigzag-line:nth-child(even) {
+				transform: rotate(135deg); /* FIXED from 45deg to 135deg */
+			}
+		</style> -->
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img src="forks.jpg" alt="Logo" />
+				<span>YOUR LOGO</span>
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Product</a></li>
+					<li><a href="#">Promo</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class="search-bar">
+				<input type="text" placeholder="Search..." />
+				<img
+					src="https://cdn-icons-png.flaticon.com/512/482/482631.png"
+					alt="Search"
+				/>
+			</div>
+		</header>
+
+		<section class="hero">
+			<div class="text-area">
+				<h1>Title Here</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+					lacinia odio vitae vestibulum vestibulum.
+				</p>
+				<button class="order-button">ORDER NOW</button>
+			</div>
+		</section>
+
+		<section class="popular">
+			<div class="horizontal-bar"></div>
+			<div
+				class="striped-circle"
+				style="
+					display: block;
+					margin-top: -60px;
+					margin-left: 1220px;
+					position: absolute;
+					z-index: 1;
+				"
+			></div>
+			<div class="zigzag" style="position: relative; left: 60px">
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+			</div>
+			<h2>Popular Menu</h2>
+			<p class="desc">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+				Vivamus lacinia odio vitae vestibulum vestibulum.
+			</p>
+
+			<div class="menu-container">
+				<div class="menu-item">
+					<div class="circle circle1 flip-container">
+						<img src="s1.png" alt="Sushi 1" />
+					</div>
+					<h3>Title Here</h3>
+					<p>Lorem ipsum dolor sit amet,<br />consectetur adipiscing elit.</p>
+				</div>
+				<div class="menu-item">
+					<div class="circle circle2 flip-container">
+						<img src="s22.PNG" alt="Sushi 2" />
+					</div>
+					<h3>Title Here</h3>
+					<p>Lorem ipsum dolor sit amet,<br />consectetur adipiscing elit.</p>
+				</div>
+				<div class="menu-item">
+					<div class="circle circle3 flip-container">
+						<img src="s3.PNG" alt="Sushi 3" />
+					</div>
+					<h3>Title Here</h3>
+					<p>Lorem ipsum dolor sit amet,<br />consectetur adipiscing elit.</p>
+				</div>
+			</div>
+			<div
+				class="striped-circle"
+				style="
+					display: block;
+					margin-top: -100px;
+					margin-left: -18px;
+					position: absolute;
+					z-index: 1;
+				"
+			></div>
+			<div class="zigzag" style="position: relative; left: 1220px">
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+			</div>
+		</section>
+
+		<section class="top-section">
+			<div class="content-wrapper">
+				<div
+					class="image-container flip-container"
+					style="position: relative; z-index: 2"
+				>
+					<img src="s4.PNG" alt="Sushi Image" />
+				</div>
+
+				<div class="content">
+					<div
+						class="zigzag"
+						style="position: relative; left: -40px; top: -20px"
+					>
+						<div
+							class="zigzag-line"
+							style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+						></div>
+						<div
+							class="zigzag-line"
+							style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+						></div>
+						<div
+							class="zigzag-line"
+							style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+						></div>
+						<div
+							class="zigzag-line"
+							style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+						></div>
+						<div
+							class="zigzag-line"
+							style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+						></div>
+						<div
+							class="zigzag-line"
+							style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+						></div>
+					</div>
+
+					<h2>Title Here</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur<br />
+						adipiscing elit. Vivamus lacinia <br />odio vitae vestibulum
+						vestibulum.
+					</p>
+					<button class="order-button">ORDER NOW</button>
+				</div>
+			</div>
+
+			<div
+				class="striped-circle"
+				style="
+					display: block;
+					margin-top: -150px;
+					margin-left: 180px;
+					position: absolute;
+					z-index: 1;
+				"
+			></div>
+			<div
+				class="striped-circle"
+				style="
+					display: block;
+					margin-top: -60px;
+					margin-left: 1220px;
+					position: absolute;
+					z-index: 1;
+				"
+			></div>
+		</section>
+
+		<!--section 4-->
+		<section class="bottom-section">
+			<div
+				class="striped-circle"
+				style="
+					display: block;
+					margin-top: -60px;
+					margin-left: 1120px;
+					position: absolute;
+					z-index: 1;
+				"
+			></div>
+			<div class="zigzag" style="position: relative; left: 100px">
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+				<div class="zigzag-line"></div>
+			</div>
+			<h2>Statistics</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+				Vivamus lacinia odio vitae vestibulum vestibulum.
+			</p>
+
+			<div class="stats">
+				<div class="stat-outer">
+					<div class="stat">
+						<span>123</span>
+						<label>STORE</label>
+					</div>
+				</div>
+				<div class="stat-outer">
+					<div class="stat">
+						<span>100</span>
+						<label>MENU</label>
+					</div>
+				</div>
+				<div class="stat-outer">
+					<div class="stat">
+						<span>200</span>
+						<label>CHEF</label>
+					</div>
+				</div>
+				<div
+					class="zigzag"
+					style="position: relative; left: 120px; margin-top: 140px"
+				>
+					<div class="zigzag-line"></div>
+					<div class="zigzag-line"></div>
+					<div class="zigzag-line"></div>
+					<div class="zigzag-line"></div>
+					<div class="zigzag-line"></div>
+					<div class="zigzag-line"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- section 5 -->
+		<section class="top-section flipped">
+			<div class="content-wrapper flipped-wrapper" style="position: relative">
+				<!-- Striped circle behind image -->
+				<div
+					class="striped-circle"
+					style="
+						display: block;
+						margin-top: -200px;
+						margin-left: 790px;
+						position: absolute;
+						z-index: 1;
+					"
+				></div>
+
+				<!-- Image container above striped circle -->
+				<div
+					class="image-container flip-container"
+					style="position: relative; z-index: 2"
+				>
+					<img src="s7.PNG" alt="Sushi Image" />
+				</div>
+
+				<div class="content">
+					<h2>Title Here</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur<br />
+						adipiscing elit. Vivamus lacinia <br />odio vitae vestibulum
+						vestibulum.
+					</p>
+					<button class="order-button">ORDER NOW</button>
+
+					<!-- Optional second striped-circle, if needed -->
+					<div
+						class="striped-circle"
+						style="display: block; margin-left: 170px"
+					></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- section 6 -->
+
+		<div class="header-section">
+			<img src="g.png" alt="Profile" class="profile-img" />
+			<p>
+				If you are a culinary fan, if you like to spend time in your kitchen,
+				you likely find yourself <br />looking for reliable resources through
+				which you can
+			</p>
+			<h3>Phoebe Frazier</h3>
+		</div>
+		<!-- section 7 -->
+		<div class="subscribe-section">
+			<div
+				class="striped-circle"
+				style="
+					display: block;
+					margin-top: -60px;
+					margin-left: 1220px;
+					position: absolute;
+					z-index: 1;
+				"
+			></div>
+			<div class="zigzag" style="position: relative; left: -40px">
+				<div
+					class="zigzag-line"
+					style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+				></div>
+				<div
+					class="zigzag-line"
+					style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+				></div>
+				<div
+					class="zigzag-line"
+					style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+				></div>
+				<div
+					class="zigzag-line"
+					style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+				></div>
+				<div
+					class="zigzag-line"
+					style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+				></div>
+				<div
+					class="zigzag-line"
+					style="border-left-color: #1e2244; border-bottom-color: #1e2244"
+				></div>
+			</div>
+
+			<h2>Title Here</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
+				odio vitae vestibulum vestibulum.
+			</p>
+			<div class="email-box">
+				<input type="email" placeholder="Your Email" />
+				<button>SUBSCRIBE</button>
+			</div>
+			<div class="striped-circle" style="display: block; margin: 0 auto"></div>
+		</div>
+		<!-- section 8  -->
+		<footer class="footer">
+			<div class="footer-left">
+				<h4>Title Here</h4>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
+					dignissim nunc, id maximus ex. Etiam nec dignissim elit, at dignissim
+					enim.
+				</p>
+				<div class="social-icons">
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-facebook"></i>
+					<i class="fab fa-twitter"></i>
+					<i class="fab fa-whatsapp"></i>
+				</div>
+			</div>
+			<div class="footer-column">
+				<h4>About</h4>
+				<p>History</p>
+				<p>Our Team</p>
+				<p>Brand Guidelines</p>
+				<p>Terms & Condition</p>
+				<p>Privacy Policy</p>
+			</div>
+			<div class="footer-column">
+				<h4>Services</h4>
+				<p>How to Order</p>
+				<p>Our Product</p>
+				<p>Order Status</p>
+				<p>Promo</p>
+				<p>Payment Method</p>
+			</div>
+			<div class="footer-column">
+				<h4>Other</h4>
+				<p>Contact Us</p>
+				<p>Help</p>
+				<p>Privacy</p>
+			</div>
+		</footer>
+	</body>
+</html>
